@@ -1,0 +1,547 @@
+/* ========================================
+   Student Module Styles
+   ======================================== */
+
+/* ---- Dashboard Grid ---- */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+.dashboard-grid-equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+/* ---- XP Overview Card ---- */
+.xp-overview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+}
+.xp-details {
+  flex: 1;
+}
+.xp-level {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 14px;
+  background: linear-gradient(135deg, var(--primary-bg), var(--accent-bg));
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-3);
+}
+.xp-next-level {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-3);
+}
+.xp-next-level span {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ---- Skills List ---- */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+}
+.skill-item + .skill-item {
+  border-top: 1px solid var(--border-light);
+}
+.skill-name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  min-width: 120px;
+}
+.skill-progress-wrap {
+  flex: 1;
+}
+.skill-level {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--primary);
+  min-width: 50px;
+  text-align: right;
+}
+
+/* ---- Recommended Jobs ---- */
+.job-card-mini {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.job-card-mini:hover {
+  border-color: var(--primary-lighter);
+  box-shadow: var(--shadow);
+}
+.job-card-mini + .job-card-mini {
+  margin-top: var(--space-3);
+}
+.job-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+.job-info {
+  flex: 1;
+  min-width: 0;
+}
+.job-title-text {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.job-company-text {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+/* ---- Activity Feed ---- */
+.activity-item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+}
+.activity-item + .activity-item {
+  border-top: 1px solid var(--border-light);
+}
+.activity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.activity-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.activity-text strong {
+  color: var(--text);
+}
+.activity-time {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+/* ---- Practice Arena ---- */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-5);
+}
+.challenge-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.challenge-card:hover {
+  border-color: var(--primary-lighter);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.challenge-header {
+  padding: var(--space-5);
+}
+.challenge-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.challenge-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+.challenge-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.challenge-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  background: var(--surface);
+  border-top: 1px solid var(--border-light);
+}
+.challenge-xp {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ---- Code Editor Mock ---- */
+.code-editor {
+  background: #1E293B;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.code-editor-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: #0F172A;
+}
+.code-editor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+}
+.code-editor-body {
+  padding: var(--space-4) var(--space-5);
+  font-family: 'Courier New', monospace;
+  font-size: var(--text-sm);
+  color: #E2E8F0;
+  line-height: 1.7;
+  min-height: 200px;
+}
+.code-line-number {
+  color: #475569;
+  margin-right: var(--space-4);
+  user-select: none;
+}
+.code-keyword { color: #C084FC; }
+.code-string { color: #34D399; }
+.code-function { color: #60A5FA; }
+.code-comment { color: #64748B; }
+
+/* ---- Interview Arena ---- */
+.interview-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+.interview-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.interview-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.interview-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto var(--space-4);
+}
+.interview-card h3 {
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+.interview-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+/* ---- Video Call Mock ---- */
+.video-call {
+  background: #0F172A;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+}
+.video-main {
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1E293B, #0F172A);
+  position: relative;
+}
+.video-main .interviewer-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+}
+.video-self {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  width: 160px;
+  aspect-ratio: 16/9;
+  background: #334155;
+  border-radius: var(--radius);
+  border: 2px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  font-size: 1.5rem;
+}
+.video-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: #1E293B;
+}
+.video-control-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  background: #334155;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.video-control-btn:hover { background: #475569; }
+.video-control-btn.end-call {
+  background: var(--danger);
+  width: 56px;
+}
+.video-control-btn.end-call:hover { background: #DC2626; }
+
+/* ---- Portfolio ---- */
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--primary-bg), var(--accent-bg));
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-8);
+}
+.portfolio-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.portfolio-info h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-1);
+}
+.portfolio-info .portfolio-title {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-3);
+}
+.portfolio-stats {
+  display: flex;
+  gap: var(--space-6);
+}
+.portfolio-stat-item {
+  text-align: center;
+}
+.portfolio-stat-item .pstat-value {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--primary);
+}
+.portfolio-stat-item .pstat-label {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.project-preview {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.project-content {
+  padding: var(--space-5);
+}
+.project-content h4 {
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+.project-content p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+/* ---- Job Listings ---- */
+.job-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 16px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-chip:hover {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+  color: var(--primary);
+}
+.filter-chip.active {
+  background: var(--primary);
+  color: var(--text-inverse);
+  border-color: var(--primary);
+}
+
+.job-listing-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+  margin-bottom: var(--space-4);
+}
+.job-listing-card:hover {
+  border-color: var(--primary-lighter);
+  box-shadow: var(--shadow);
+}
+.job-listing-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+.job-listing-content {
+  flex: 1;
+  min-width: 0;
+}
+.job-listing-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+.job-listing-company {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+.job-listing-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+.job-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+.job-listing-skills {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.job-listing-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .dashboard-stats { grid-template-columns: repeat(2, 1fr); }
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .dashboard-grid-equal { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .dashboard-stats { grid-template-columns: 1fr; }
+  .xp-overview { flex-direction: column; text-align: center; }
+  .portfolio-header { flex-direction: column; text-align: center; }
+  .job-listing-card { flex-direction: column; }
+  .job-listing-actions { flex-direction: row; width: 100%; }
+}

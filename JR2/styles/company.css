@@ -1,0 +1,200 @@
+/* ========================================
+   Company Module Styles
+   ======================================== */
+
+/* ---- Pipeline ---- */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+.pipeline-stage {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+  transition: all var(--transition);
+}
+.pipeline-stage:hover { box-shadow: var(--shadow); }
+.pipeline-count {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+.pipeline-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.pipeline-bar {
+  height: 4px;
+  border-radius: var(--radius-full);
+  margin-top: var(--space-3);
+}
+
+/* ---- Job Post Card ---- */
+.job-post-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: all var(--transition);
+  margin-bottom: var(--space-4);
+}
+.job-post-card:hover {
+  box-shadow: var(--shadow);
+}
+.job-post-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.job-post-title {
+  font-weight: 700;
+  font-size: var(--text-base);
+  margin-bottom: 2px;
+}
+.job-post-dept {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.job-post-stats {
+  display: flex;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+.job-post-stat {
+  text-align: center;
+}
+.job-post-stat-value {
+  font-weight: 800;
+  font-size: var(--text-xl);
+  color: var(--primary);
+}
+.job-post-stat-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+/* ---- Candidate Card ---- */
+.candidate-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+  margin-bottom: var(--space-3);
+}
+.candidate-card:hover {
+  border-color: var(--primary-lighter);
+  box-shadow: var(--shadow);
+}
+.candidate-info {
+  flex: 1;
+  min-width: 0;
+}
+.candidate-name {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  margin-bottom: 2px;
+}
+.candidate-title {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+.candidate-skills {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+.candidate-xp {
+  text-align: center;
+  min-width: 60px;
+}
+.candidate-xp-value {
+  font-weight: 800;
+  font-size: var(--text-lg);
+  color: var(--primary);
+}
+.candidate-xp-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+.candidate-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* ---- Post Job Form ---- */
+.form-group {
+  margin-bottom: var(--space-5);
+}
+.form-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--text);
+}
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  transition: all var(--transition);
+  background: var(--white);
+}
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-bg);
+}
+.form-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  background: var(--white);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  min-height: 100px;
+  resize: vertical;
+  transition: all var(--transition);
+}
+.form-textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-bg);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .pipeline { grid-template-columns: repeat(2, 1fr); }
+  .candidate-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .candidate-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
